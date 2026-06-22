@@ -45,5 +45,5 @@ scripts/
 
 ### Author
 
-Utsav Ratadiya
+Utsav Ratpiya
 Bluestock Fintech Data Analyst Intern
