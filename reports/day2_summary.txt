@@ -1,0 +1,24 @@
+DAY 2 SUMMARY
+
+Tasks Completed:
+
+1. Cleaned nav_history dataset
+2. Cleaned investor_transactions dataset
+3. Cleaned scheme_performance dataset
+4. Generated 10 cleaned CSV files
+5. Designed SQLite star schema
+6. Created SQLite database
+7. Loaded cleaned datasets into SQLite
+8. Verified database row counts
+9. Wrote analytical SQL queries
+10. Created data dictionary
+
+Deliverables:
+
+* 10 cleaned CSV files
+* bluestock_mf.db
+* schema.sql
+* queries.sql
+* data_dictionary.md
+
+Status: Completed
