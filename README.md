@@ -1,42 +1,63 @@
-# Mutual Fund Analytics Platform
+# 📊 Mutual Fund Analytics Platform
 
 ## Overview
 
-This project is developed as part of the **Bluestock Fintech Internship Capstone Project**. The objective is to build a Mutual Fund Analytics Platform that performs data ingestion, cleaning, validation, database design, exploratory data analysis (EDA), and performance analytics on mutual fund datasets.
+This project is developed as part of the **Bluestock Fintech Internship Capstone Project**.
 
-The platform uses Python, Pandas, SQLAlchemy, SQLite, SQL, Plotly, and Seaborn to analyze historical NAV, AUM growth, SIP inflows, investor behavior, portfolio holdings, and benchmark indices.
+The objective is to build a complete **Mutual Fund Analytics Platform** that performs end-to-end mutual fund data analysis, including data ingestion, cleaning, database design, exploratory data analysis (EDA), fund performance analytics, and dashboard-ready reporting.
+
+The project leverages Python, SQL, SQLite, and data visualization libraries to analyze historical NAV, AUM growth, SIP inflows, investor demographics, portfolio holdings, benchmark indices, and risk-adjusted mutual fund performance.
 
 ---
 
-# Project Objectives
+# 🎯 Project Objectives
 
-- Analyze mutual fund performance and growth trends
-- Track historical NAV movements
-- Study Assets Under Management (AUM)
-- Analyze SIP inflows and investor transactions
-- Build a structured SQLite data warehouse
-- Generate insights using SQL and Python
+- Build an end-to-end Mutual Fund Analytics Platform
+- Perform data ingestion and preprocessing
+- Clean and validate financial datasets
+- Design a SQLite data warehouse
+- Perform SQL-based analytics
+- Analyze historical NAV trends
+- Study AUM growth and SIP inflows
 - Perform Exploratory Data Analysis (EDA)
-- Prepare datasets for dashboards and business reporting
+- Evaluate fund performance using financial metrics
+- Compare mutual funds against benchmark indices
+- Generate dashboard-ready datasets
+- Develop interactive Power BI dashboards
 
 ---
 
-# Tech Stack
+# 🛠 Tech Stack
+
+### Programming
 
 - Python
+
+### Libraries
+
 - Pandas
 - NumPy
-- SQLAlchemy
-- SQLite
-- SQL
 - Matplotlib
 - Seaborn
 - Plotly
+- SQLAlchemy
+- SciPy
+
+### Database
+
+- SQLite
+- SQL
+
+### Tools
+
 - Jupyter Notebook
+- Git
+- GitHub
+- Power BI (Upcoming)
 
 ---
 
-# Project Structure
+# 📁 Project Structure
 
 ```text
 Capstone Mutual Fund Analytics
@@ -49,19 +70,27 @@ Capstone Mutual Fund Analytics
 │
 ├── notebooks/
 │   ├── day1_analysis.ipynb
-│   └── EDA_Analysis.ipynb
+│   ├── EDA_Analysis.ipynb
+│   └── Performance_Analytics.ipynb
 │
 ├── reports/
 │   ├── charts/
+│   ├── alpha_beta.csv
+│   ├── cagr_comparison.csv
+│   ├── fund_scorecard.csv
+│   ├── max_drawdown.csv
+│   ├── sharpe_ratio.csv
+│   ├── sortino_ratio.csv
+│   ├── tracking_error.csv
 │   ├── data_dictionary.md
 │   ├── data_quality_report.txt
 │   ├── day1_observations.txt
 │   └── day2_summary.txt
 │
 ├── scripts/
-│   ├── data_ingestion.py
-│   ├── data_cleaning.py
 │   ├── create_database.py
+│   ├── data_cleaning.py
+│   ├── data_ingestion.py
 │   ├── database_loader.py
 │   ├── live_nav_fetch.py
 │   ├── run_queries.py
@@ -79,62 +108,63 @@ Capstone Mutual Fund Analytics
 
 ---
 
-# Datasets Used
+# 📂 Datasets Used
 
-The project uses the following datasets:
+The project utilizes 10 mutual fund datasets.
 
-1. Fund Master
-2. NAV History
-3. AUM by Fund House
-4. Monthly SIP Inflows
-5. Category Inflows
-6. Industry Folio Count
-7. Scheme Performance
-8. Investor Transactions
-9. Portfolio Holdings
-10. Benchmark Indices
+| Dataset | Description |
+|----------|-------------|
+| Fund Master | Scheme information |
+| NAV History | Daily NAV values |
+| AUM by Fund House | Assets Under Management |
+| Monthly SIP Inflows | SIP investment data |
+| Category Inflows | Category-wise inflows |
+| Industry Folio Count | Folio statistics |
+| Scheme Performance | Performance metrics |
+| Investor Transactions | Investor transaction history |
+| Portfolio Holdings | Portfolio allocation |
+| Benchmark Indices | NIFTY50 & NIFTY100 |
 
 ---
 
-# Day 1 Deliverables
+# ✅ Day 1 Deliverables
 
 ## Project Setup & Data Ingestion
 
 Completed:
 
-- Created project folder structure
+- Created project structure
 - Configured GitHub repository
-- Installed required dependencies
-- Loaded all datasets into Pandas
-- Explored data structure and quality
-- Fetched live NAV using MFAPI
-- Validated AMFI scheme codes
-- Generated initial data quality observations
+- Installed dependencies
+- Imported all datasets
+- Explored dataset quality
+- Live NAV API integration
+- AMFI Code Validation
+- Initial Data Quality Report
 
 ### Files Created
 
+- day1_analysis.ipynb
 - data_ingestion.py
 - live_nav_fetch.py
 - validate_amfi_code.py
-- day1_analysis.ipynb
 
 ---
 
-# Day 2 Deliverables
+# ✅ Day 2 Deliverables
 
 ## Data Cleaning
 
 Completed:
 
-- Cleaned NAV history dataset
-- Standardized investor transaction data
-- Validated scheme performance metrics
-- Cleaned all project datasets
-- Generated processed CSV files
+- Cleaned NAV History
+- Standardized Investor Transactions
+- Validated Scheme Performance
+- Processed all datasets
 
 ## Database Design
 
-Designed a SQLite Star Schema.
+Designed SQLite Star Schema.
 
 ### Dimension Tables
 
@@ -148,152 +178,210 @@ Designed a SQLite Star Schema.
 - fact_performance
 - fact_aum
 
-## Database Loading
-
-Completed:
-
-- Created SQLite database
-- Loaded cleaned datasets using SQLAlchemy
-- Verified table row counts
-
 ## SQL Analytics
 
-Implemented analytical SQL queries for:
+Performed:
 
-- Top funds by AUM
-- Monthly NAV analysis
-- SIP growth trends
-- State-wise transactions
-- Expense ratio analysis
-- Performance ranking
+- Top Funds by AUM
+- Monthly NAV Analysis
+- SIP Growth Analysis
+- Expense Ratio Analysis
+- Fund Performance Ranking
+- State-wise Transactions
 
 ---
 
-# Day 3 Deliverables
+# ✅ Day 3 Deliverables
 
 ## Exploratory Data Analysis (EDA)
 
-Performed detailed exploratory analysis using the processed datasets and generated **15+ analytical charts**.
+Generated **15+ analytical visualizations**.
 
 ### NAV Analysis
 
-- Daily NAV Trend (2022–2026)
-- Highlighted 2023 Bull Run
-- Highlighted 2024 Market Correction
+- Daily NAV Trend
+- 2023 Bull Run Highlight
+- 2024 Market Correction
 
 ### AUM Analysis
 
-- Fund House AUM Growth (2022–2025)
-- SBI Mutual Fund dominance (~₹12.5 Lakh Crore)
-- Top 10 Fund Houses by AUM
+- AUM Growth
+- Top Fund Houses
+- SBI Mutual Fund Dominance
 
 ### SIP Analysis
 
-- Monthly SIP Inflow Trend
-- Annotated all-time high SIP inflow (₹31,002 Cr)
+- Monthly SIP Trend
+- Highest SIP Inflow (₹31,002 Cr)
 
 ### Category Analysis
 
-- Category-wise Monthly Net Inflow Heatmap
+- Monthly Net Inflow Heatmap
 
-### Investor Demographics
+### Investor Analytics
 
-- Age Group Distribution
+- Age Distribution
 - Gender Distribution
-- SIP Amount by Age Group
-- T30 vs B30 Investor Distribution
+- Average SIP by Age
+- T30 vs B30 Investors
 
 ### Geographic Analysis
 
-- State-wise SIP Investment
-- Top 10 Cities by SIP Investment
+- State-wise Investments
+- Top Cities
 
 ### Folio Analysis
 
-- Industry Folio Growth
-- Category-wise Folio Growth
-- Monthly Folio Count Increase
-- Quarterly Average Folio Count
+- Monthly Growth
+- Quarterly Growth
+- Category-wise Folios
 
 ### Performance Analysis
 
-- Daily NAV Return Distribution
-- NAV Return Correlation Matrix (Top 10 Funds)
+- Daily Return Distribution
+- Correlation Matrix
 
 ### Portfolio Analysis
 
-- Sector Allocation Donut Chart
-- Top 10 Sectors by Portfolio Weight
+- Sector Allocation
+- Top Sector Exposure
 
 ### Deliverables
 
-Created:
-
 - EDA_Analysis.ipynb
-- 15+ Visualization Charts
-- Exported PNG Charts
-- Documented 10 Key EDA Findings
+- 15+ Charts
+- PNG Exports
+- Business Insights
 
 ---
 
-# Current Project Progress
+# ✅ Day 4 Deliverables
+
+## Fund Performance Analytics
+
+Performed comprehensive mutual fund performance evaluation.
+
+### Daily Return Analysis
+
+- Daily Return Calculation
+- Return Distribution Validation
+
+### CAGR Analysis
+
+- 1-Year CAGR
+- 3-Year CAGR
+- 5-Year CAGR
+- CAGR Comparison Table
+
+### Risk Adjusted Performance
+
+- Sharpe Ratio
+- Sortino Ratio
+
+### Benchmark Analytics
+
+- Alpha Calculation
+- Beta Calculation
+- Benchmark Comparison
+- Tracking Error
+
+### Risk Analysis
+
+- Maximum Drawdown
+- Peak & Bottom Drawdown Dates
+
+### Composite Fund Score
+
+Created a weighted **Fund Score (0–100)** using:
+
+- 30% × 3-Year CAGR Rank
+- 25% × Sharpe Ratio Rank
+- 20% × Alpha Rank
+- 15% × Expense Ratio Rank
+- 10% × Maximum Drawdown Rank
+
+### Deliverables
+
+- Performance_Analytics.ipynb
+- fund_scorecard.csv
+- alpha_beta.csv
+- tracking_error.csv
+- Benchmark Comparison PNG
+- Sharpe Ratio Chart
+- Sortino Ratio Chart
+- CAGR Chart
+- Maximum Drawdown Chart
+- Fund Scorecard Chart
+
+---
+
+# 📈 Current Project Progress
 
 | Day | Module | Status |
 |------|---------|--------|
 | Day 1 | Project Setup & Data Ingestion | ✅ Completed |
 | Day 2 | Data Cleaning & Database Design | ✅ Completed |
 | Day 3 | Exploratory Data Analysis (EDA) | ✅ Completed |
-| Day 4 | Fund Performance Analytics | 🔄 In Progress |
+| Day 4 | Fund Performance Analytics | ✅ Completed |
+| Day 5 | Dashboard Development | 🔄 In Progress |
 
 ---
 
-# Key Features
+# 🚀 Key Features
 
 - Automated ETL Pipeline
 - Data Cleaning & Validation
 - SQLite Data Warehouse
-- SQL-based Analytics
+- SQL Analytics
 - Exploratory Data Analysis
-- Interactive Plotly Visualizations
 - NAV Trend Analysis
 - AUM Growth Analysis
 - SIP Trend Analysis
-- Investor Demographic Analysis
-- Geographic Investment Analysis
-- Portfolio Sector Allocation
-- Correlation Analysis
-- Business Insight Generation
-- Structured Documentation
+- Investor Analytics
+- Geographic Analysis
+- Portfolio Sector Analysis
+- Daily Return Analysis
+- CAGR Analysis
+- Sharpe Ratio
+- Sortino Ratio
+- Alpha & Beta
+- Maximum Drawdown
+- Fund Scorecard
+- Benchmark Comparison
+- Tracking Error Analysis
+- Dashboard-ready CSV Outputs
+- Business Insights
+- Professional Documentation
 
 ---
 
-# How to Run
+# ▶️ How to Run
 
-## 1. Install Dependencies
+## Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## 2. Run Data Cleaning
+## Run Data Cleaning
 
 ```bash
 python scripts/data_cleaning.py
 ```
 
-## 3. Create Database
+## Create Database
 
 ```bash
 python scripts/create_database.py
 ```
 
-## 4. Load Data into Database
+## Load Database
 
 ```bash
 python scripts/database_loader.py
 ```
 
-## 5. Verify Database
+## Verify Database
 
 ```bash
 python scripts/verify_database.py
@@ -301,38 +389,45 @@ python scripts/verify_database.py
 
 ---
 
-# Outputs
+# 📊 Outputs
 
 The project generates:
 
-- Cleaned datasets
+- Cleaned CSV Files
 - SQLite Database
-- SQL Analytics
+- SQL Reports
 - EDA Notebook
-- PNG Charts
+- Performance Analytics Notebook
+- Fund Scorecard
+- Alpha & Beta Report
+- Tracking Error Report
+- Benchmark Comparison Charts
 - Business Insights
-- Data Quality Reports
+- Dashboard-ready Datasets
+- PNG Charts
 
 ---
 
-# Future Work
+# 📅 Future Work
 
-The next phase includes:
+Upcoming module:
 
-- Daily Return Calculation
-- CAGR (1Y, 3Y, 5Y)
-- Sharpe Ratio
-- Sortino Ratio
-- Alpha & Beta
-- Maximum Drawdown
-- Fund Scorecard (0–100)
-- Benchmark Comparison
-- Tracking Error Analysis
-- Interactive Dashboard
+## Day 5 – Dashboard Development
+
+- Connect Power BI with SQLite
+- Industry Overview Dashboard
+- Fund Performance Dashboard
+- Investor Analytics Dashboard
+- SIP & Market Trends Dashboard
+- Interactive Filters
+- Drill-through Navigation
+- Dashboard Export (PBIX)
+- Dashboard PDF
+- Dashboard PNG Screenshots
 
 ---
 
-# Author
+# 👨‍💻 Author
 
 **Utsav Ratpiya**
 
@@ -340,4 +435,6 @@ B.Tech Computer Science Engineering (AI & ML)
 
 Adani University
 
-Bluestock Fintech Internship – Mutual Fund Analytics Capstone Project
+Bluestock Fintech Internship
+
+Mutual Fund Analytics Capstone Project
