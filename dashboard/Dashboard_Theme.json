@@ -1,0 +1,19 @@
+{
+    "name": "Bluestock Professional Theme",
+    "background": "#F5F7FB",
+    "foreground": "#1E293B",
+    "tableAccent": "#2563EB",
+
+    "dataColors": [
+        "#2563EB",
+        "#16A34A",
+        "#F59E0B",
+        "#7C3AED",
+        "#06B6D4",
+        "#DC2626",
+        "#14B8A6",
+        "#F97316",
+        "#4F46E5",
+        "#64748B"
+    ]
+}
