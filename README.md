@@ -61,7 +61,7 @@ The project utilizes **Python, SQL, SQLite, DAX, and Microsoft Power BI** to ana
 > dashboard/Dashboard images/Home.png
 
 ```markdown
-![Home Dashboard](dashboard/Dashboard%20images/Home.png)
+![Home Dashboard](![dashboard/Dashboard%20images/Home.png](https://github.com/Utsav-Ratpiya/Mutual-Fund-Analytics-Bluestock-/blob/main/dashboard/Dashboard%20images/Home.png))
 ```
 
 ---
