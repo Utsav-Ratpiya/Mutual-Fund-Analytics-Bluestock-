@@ -25,7 +25,7 @@
 
 ---
 
-## 📈 Investor Analytics Dashboard
+## 📈 SIP And Market Trend Dashboard
 
 ![SIP & Market Trend](dashboard/Dashboard%20images/SIP%20&%20Market%20Trend.png)
 
