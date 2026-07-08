@@ -13,7 +13,7 @@
 
 ---
 
-## 📈 Fund Performance Dashboard
+## 📊 Fund Performance Dashboard
 
 ![Fund Performance](dashboard/Dashboard%20images/Fund%20Performance.png)
 
@@ -21,7 +21,13 @@
 
 ## 👥 Investor Analytics Dashboard
 
-![Investor Analytics](dashboard/Dashboard%20images/Investor_Analytics.png)
+![Investor Analytics](dashboard/Dashboard%20images/Investor%20Analytics.png)
+
+---
+
+## 📈 Investor Analytics Dashboard
+
+![SIP & Market Trend](dashboard/Dashboard%20images/SIP%20&%20Market%20Trend.png)
 
 ---
 
@@ -113,26 +119,42 @@ The objective is to transform raw mutual fund datasets into meaningful insights 
 Mutual-Fund-Analytics-Bluestock/
 │
 ├── dashboard/
-│   ├── assets/
-│   │   ├── icons/
-│   │   └── bluestock_logo.png
 │   ├── Dashboard images/
-│   ├── bluestock_mf_dashboard.pbix
+│   │   ├── industry_overview.png
+│   │   ├── fund_performance.png
+│   │   ├── investor_analytics.png
+│   │   ├── sip&market_trend.png
+│   │   └── home.png
+│   │
 │   ├── Dashboard.pdf
-│   └── Dashboard_Theme.json
+│   ├── Dashboard_Theme.json
+│   └── bluestock_mf_dashboard.pbix
 │
 ├── data/
-│   ├── processed/
-│   └── raw/
+│   ├── raw/
+│   │   ├── 01_fund_master.csv
+│   │   ├── ...
+│   │   └── 10_benchmark_indices.csv
+│   │
+│   └── processed/
+│       ├── 01_fund_master_cleaned.csv
+│       ├── ...
+│       └── 10_benchmark_indices_cleaned.csv
 │
 ├── notebooks/
-│   ├── day1_analysis.ipynb
+│   ├── Day_1_Data_Ingestion.ipynb
 │   ├── EDA_Analysis.ipynb
 │   ├── Performance_Analytics.ipynb
 │   └── Advanced_Analytics.ipynb
 │
 ├── reports/
 │   ├── charts/
+│   │   ├── rolling_sharpe_chart.png
+│   │   ├── sector_hhi_concentration.png
+│   │   ├── nav_trend.png
+│   │   ├── ...
+│   │   └── sip_trend.png
+│   │
 │   ├── alpha_beta.csv
 │   ├── cagr_comparison.csv
 │   ├── cohort_analysis.csv
@@ -144,17 +166,28 @@ Mutual-Fund-Analytics-Bluestock/
 │   ├── sharpe_ratio.csv
 │   ├── sip_continuity.csv
 │   ├── sortino_ratio.csv
-│   ├── var_cvar_report.csv
-│   └── tracking_error.csv
+│   ├── tracking_error.csv
+│   └── var_cvar_report.csv
 │
 ├── scripts/
-│   └── recommender.py
+│   ├── create_database.py
+│   ├── data_cleaning.py
+│   ├── data_ingestion.py
+│   ├── database_loader.py
+│   ├── live_nav_fetch.py
+│   ├── recommender.py
+│   ├── run_queries.py
+│   ├── validate_amfi_code.py
+│   ├── verify_database.py
 │
 ├── sql/
+│   ├── schema.sql
+│   └── queries.sql
+│
 ├── bluestock_mf.db
+├── requirements.txt
 ├── README.md
 └── .gitignore
-```
 
 ---
 
