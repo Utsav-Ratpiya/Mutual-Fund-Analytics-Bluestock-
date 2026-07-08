@@ -1,48 +1,109 @@
 # 📊 Mutual Fund Analytics Platform
 
-> **Bluestock Fintech Internship Capstone Project**
-
-An end-to-end Mutual Fund Analytics Platform built using **Python, SQLite, SQL, Jupyter Notebook, and Power BI**. This project analyzes historical mutual fund data, performs financial and risk analytics, and presents interactive business dashboards for investment insights.
+> **Bluestock Fintech Internship Capstone Project**  
+> A complete Mutual Fund Analytics platform built using **Python, SQL, and Power BI** to analyze mutual fund performance, investor behavior, portfolio risk, and industry trends.
 
 ---
 
-## 🚀 Project Overview
+# 📷 Dashboard Preview
 
-The objective of this project is to build a complete analytics pipeline for mutual fund data, including:
+## 🏠 Industry Overview
 
-- Data Ingestion & Validation
+![Industry Overview](dashboard/Dashboard%20images/Industry%20Overview.png)
+
+---
+
+## 📈 Fund Performance Dashboard
+
+![Fund Performance](dashboard/Dashboard%20images/Fund%20Performance.png)
+
+---
+
+## 👥 Investor Analytics Dashboard
+
+![Investor Analytics](dashboard/Dashboard%20images/Investor_Analytics.png)
+
+---
+
+
+## 📌 Project Overview
+
+This project analyzes Indian mutual fund data through an end-to-end analytics pipeline, covering:
+
 - Data Cleaning & Preprocessing
-- SQLite Data Warehouse
-- SQL Analytics
+- SQL Database Design
 - Exploratory Data Analysis (EDA)
-- Risk & Performance Analytics
-- Advanced Financial Metrics
-- Interactive Power BI Dashboard
-- Business Insights & Reporting
+- Performance & Risk Analytics
+- Power BI Dashboard
+- Advanced Analytics
+- Mutual Fund Recommendation System
+
+The objective is to transform raw mutual fund datasets into meaningful insights for investors and fund managers.
 
 ---
 
-## 🎯 Project Objectives
+## 🚀 Features
 
-- Build an end-to-end Mutual Fund Analytics Platform
-- Analyze historical NAV trends
-- Evaluate fund performance using financial metrics
-- Study SIP inflows and investor behaviour
-- Compare funds with benchmark indices
-- Generate dashboard-ready datasets
-- Create interactive Power BI reports
+### 📈 Data Analytics
+- Cleaned and validated 10 mutual fund datasets
+- Exploratory Data Analysis (EDA)
+- NAV trend analysis
+- AUM growth analysis
+- SIP inflow trends
+- Category inflow analysis
+- Investor demographics
+- Portfolio allocation analysis
 
+### 📊 Performance Analytics
+- Daily Return Calculation
+- CAGR (1Y / 3Y / 5Y)
+- Alpha & Beta
+- Sharpe Ratio
+- Sortino Ratio
+- Maximum Drawdown
+- Fund Scorecard
+- Benchmark Comparison
+
+### ⚠️ Advanced Risk Analytics
+- Historical VaR (95%)
+- Conditional VaR (CVaR)
+- Rolling 90-Day Sharpe Ratio
+- Investor Cohort Analysis
+- SIP Continuity Analysis
+- Sector HHI Concentration
+- Rule-Based Fund Recommendation System
+
+## 📊 Advanced Analytics
+
+### Rolling 90-Day Sharpe Ratio
+
+![Rolling Sharpe](reports/charts/rolling_sharpe_chart.png)
+
+### Sector HHI Concentration
+
+![Sector HHI](reports/charts/sector_hhi_concentration.png)
 ---
 
-# 🛠 Tech Stack
+
+### 📉 Dashboard (Power BI)
+- Industry Overview
+- Fund Performance
+- Investor Analytics
+- SIP & Market Trends
+---
+
+
+
+## 🛠 Tech Stack
 
 | Category | Technologies |
-|-----------|--------------|
-| Programming | Python |
-| Database | SQLite, SQL |
-| Libraries | Pandas, NumPy, Matplotlib, Plotly, Seaborn, SQLAlchemy, SciPy |
-| BI Tool | Power BI |
-| Tools | Jupyter Notebook, Git, GitHub |
+|----------|--------------|
+| Language | Python |
+| Libraries | Pandas, NumPy, Matplotlib, Seaborn |
+| Database | SQLite |
+| Dashboard | Power BI |
+| IDE | Jupyter Notebook, VS Code |
+| Version Control | Git & GitHub |
 
 ---
 
@@ -52,345 +113,169 @@ The objective of this project is to build a complete analytics pipeline for mutu
 Mutual-Fund-Analytics-Bluestock/
 │
 ├── dashboard/
-│   │
-│   ├── Dashboard images/
-│   │   ├── Home.png
-│   │   ├── Industry Overview.png
-│   │   ├── Fund Performance.png
-│   │   ├── Investor Analytics.png
-│   │   └── SIP & Market Trend.png
-│   │
 │   ├── assets/
 │   │   ├── icons/
 │   │   └── bluestock_logo.png
-│   │
+│   ├── Dashboard images/
+│   ├── bluestock_mf_dashboard.pbix
 │   ├── Dashboard.pdf
-│   ├── Dashboard_Theme.json
-│   └── bluestock_mf_dashboard.pbix
+│   └── Dashboard_Theme.json
 │
 ├── data/
-│   │
-│   ├── raw/
-│   │   ├── fund_master.csv
-│   │   ├── nav_history.csv
-│   │   ├── aum_history.csv
-│   │   ├── sip_inflows.csv
-│   │   ├── category_inflows.csv
-│   │   ├── folio_count.csv
-│   │   ├── scheme_performance.csv
-│   │   ├── investor_transactions.csv
-│   │   ├── portfolio_holdings.csv
-│   │   └── benchmark_indices.csv
-│   │
-│   └── processed/
-│       ├── cleaned_nav_history.csv
-│       ├── cleaned_transactions.csv
-│       ├── cleaned_scheme_performance.csv
-│       └── ...
+│   ├── processed/
+│   └── raw/
 │
 ├── notebooks/
-│   │
 │   ├── day1_analysis.ipynb
 │   ├── EDA_Analysis.ipynb
 │   ├── Performance_Analytics.ipynb
 │   └── Advanced_Analytics.ipynb
 │
 ├── reports/
-│   │
 │   ├── charts/
-│   │   ├── nav_trend.png
-│   │   ├── aum_growth.png
-│   │   ├── sip_trend.png
-│   │   ├── benchmark_comparison.png
-│   │   ├── sharpe_ratio.png
-│   │   ├── sortino_ratio.png
-│   │   ├── fund_scorecard.png
-│   │   ├── max_drawdown.png
-│   │   └── rolling_sharpe_chart.png
-│   │
 │   ├── alpha_beta.csv
 │   ├── cagr_comparison.csv
+│   ├── cohort_analysis.csv
 │   ├── fund_scorecard.csv
 │   ├── max_drawdown.csv
+│   ├── nav_returns.csv
+│   ├── rolling_sharpe_summary.csv
+│   ├── sector_hhi.csv
 │   ├── sharpe_ratio.csv
+│   ├── sip_continuity.csv
 │   ├── sortino_ratio.csv
-│   ├── tracking_error.csv
 │   ├── var_cvar_report.csv
-│   ├── data_dictionary.md
-│   ├── data_quality_report.txt
-│   ├── day1_observations.txt
-│   └── day2_summary.txt
+│   └── tracking_error.csv
 │
 ├── scripts/
-│   │
-│   ├── create_database.py
-│   ├── data_ingestion.py
-│   ├── data_cleaning.py
-│   ├── database_loader.py
-│   ├── verify_database.py
-│   ├── validate_amfi_code.py
-│   ├── live_nav_fetch.py
-│   ├── run_queries.py
 │   └── recommender.py
 │
 ├── sql/
-│   ├── schema.sql
-│   └── queries.sql
-│
 ├── bluestock_mf.db
-├── requirements.txt
-├── LICENSE
-└── README.md
+├── README.md
+└── .gitignore
 ```
 
 ---
 
-# 📂 Dataset Summary
+# 📚 Datasets
 
-The project uses **10 financial datasets** covering:
+The project uses **10 cleaned datasets**:
 
-- Fund Master
-- NAV History
-- Scheme Performance
-- Investor Transactions
-- Portfolio Holdings
-- SIP Inflows
-- Category Inflows
-- AUM Data
-- Benchmark Indices
-- Industry Folio Count
+| Dataset |
+|----------|
+| Fund Master |
+| NAV History |
+| AUM by Fund House |
+| Monthly SIP Inflows |
+| Category Inflows |
+| Industry Folio Count |
+| Scheme Performance |
+| Investor Transactions |
+| Portfolio Holdings |
+| Benchmark Indices |
 
 ---
 
 # 📅 Project Progress
 
-| Module | Status |
-|----------|--------|
-| Day 1 – Data Ingestion | ✅ Completed |
-| Day 2 – Data Cleaning & Database | ✅ Completed |
-| Day 3 – Exploratory Data Analysis | ✅ Completed |
-| Day 4 – Performance Analytics | ✅ Completed |
-| Day 5 – Power BI Dashboard | ✅ Completed |
-| Day 6 – Advanced Analytics | 🚧 In Progress |
+## ✅ Day 1
+- Project Setup
+- Data Loading
+- Initial Exploration
 
----
+## ✅ Day 2
+- Data Cleaning
+- Missing Value Handling
+- SQLite Database Creation
 
-# 📊 Day 1 – Data Ingestion
+## ✅ Day 3
+- Exploratory Data Analysis
+- Industry Insights
+- Investor Analytics
 
-### Completed
+## ✅ Day 4
+- Performance Analytics
+- Risk Metrics
+- Fund Scorecard
 
-- Project setup
-- Imported all datasets
-- Data validation
-- Live NAV integration
-- AMFI code validation
-- Initial data quality report
-
----
-
-# 🧹 Day 2 – Data Cleaning & Database
-
-### Completed
-
-- Cleaned financial datasets
-- Removed missing values
-- Standardized formats
-- Designed SQLite Star Schema
-
-### Database Tables
-
-**Dimension Tables**
-
-- dim_fund
-- dim_date
-
-**Fact Tables**
-
-- fact_nav
-- fact_transactions
-- fact_performance
-- fact_aum
-
----
-
-# 📈 Day 3 – Exploratory Data Analysis
-
-Generated **15+ business visualizations** including:
-
-- NAV Trend Analysis
-- AUM Growth
-- SIP Trend
-- Category Inflow Heatmap
-- Investor Demographics
-- Geographic Distribution
-- Portfolio Sector Allocation
-- Correlation Matrix
-- Fund Performance Distribution
-
----
-
-# 📉 Day 4 – Performance Analytics
-
-Calculated key financial metrics:
-
-- Daily Returns
-- CAGR (1Y, 3Y, 5Y)
-- Sharpe Ratio
-- Sortino Ratio
-- Alpha
-- Beta
-- Maximum Drawdown
-- Tracking Error
-- Composite Fund Scorecard
-
----
-
-# 📊 Day 5 – Power BI Dashboard
-
-Designed an interactive dashboard consisting of:
-
-### Industry Overview
-
-- Total AUM
-- SIP Inflows
-- Folio Count
-- Industry Trends
-
-### Fund Performance
-
-- Return vs Risk
-- Benchmark Comparison
-- Fund Ranking
-- Scorecard
-
-### Investor Analytics
-
-- State-wise Investments
-- Transaction Distribution
-- Investor Categories
-- SIP Insights
-
-### Dashboard Features
-
-- Interactive Filters
-- Drill-down Analysis
+## ✅ Day 5
+- Interactive Power BI Dashboard
 - KPI Cards
-- Dynamic Charts
-- Professional Theme
+- Investor Dashboard
+- Market Trend Dashboard
 
----
-
-# 📈 Day 6 – Advanced Analytics (In Progress)
-
-Currently implementing advanced financial analytics and investor behavior analysis.
-
-### Planned Tasks
-
-- Historical Value at Risk (VaR 95%)
-- Conditional Value at Risk (CVaR)
-- Rolling 90-Day Sharpe Ratio
+## ✅ Day 6
+- Historical VaR & CVaR
+- Rolling Sharpe Ratio
 - Investor Cohort Analysis
 - SIP Continuity Analysis
-- Fund Recommendation System
-- Sector HHI Concentration Analysis
-- Advanced Business Insights
-
-### Expected Deliverables
-
-- Advanced_Analytics.ipynb
-- var_cvar_report.csv
-- recommender.py
-- rolling_sharpe_chart.png
----
-
-# 📊 Key Features
-
-- ETL Pipeline
-- Data Validation
-- Data Cleaning
-- SQL Analytics
-- SQLite Warehouse
-- Financial Risk Metrics
-- Performance Evaluation
-- Benchmark Comparison
-- Investor Analytics
-- Portfolio Analytics
-- Fund Recommendation
-- Interactive Power BI Dashboard
-- Business Insights
+- Sector HHI
+- Mutual Fund Recommender
 
 ---
 
-# 📦 Deliverables
-
-### Notebooks
-
-- day1_analysis.ipynb
-- EDA_Analysis.ipynb
-- Performance_Analytics.ipynb
-- Advanced_Analytics.ipynb
-
-### Reports
+# 📊 Reports Generated
 
 - Fund Scorecard
-- Alpha Beta Report
-- Sharpe Ratio
-- Sortino Ratio
-- Tracking Error
+- Alpha & Beta Report
+- Sharpe Ratio Report
+- Sortino Ratio Report
+- CAGR Comparison
 - Maximum Drawdown
-- VaR & CVaR Report
-
-### Dashboard
-
-- Power BI (.pbix)
-- Dashboard Screenshots
-- Interactive Visualizations
+- Historical VaR & CVaR
+- Sector HHI Analysis
+- Investor Cohort Analysis
+- SIP Continuity Report
 
 ---
 
-# ▶️ Installation
+# 📷 Dashboard Preview
 
-Clone the repository
+> Dashboard screenshots are available inside:
 
-```bash
-git clone https://github.com/Utsav-Ratpiya/Mutual-Fund-Analytics-Bluestock-.git
-```
-
-Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-Run data cleaning
-
-```bash
-python scripts/data_cleaning.py
-```
-
-Create database
-
-```bash
-python scripts/create_database.py
-```
-
-Load database
-
-```bash
-python scripts/database_loader.py
+```text
+dashboard/Dashboard images/
 ```
 
 ---
 
-# 📈 Future Improvements
+# ▶️ How to Run
 
-- Live Mutual Fund API Integration
-- Real-time Dashboard Refresh
-- Machine Learning Fund Recommendation
+### Clone Repository
+
+```bash
+git clone https://github.com/Utsav-Ratpiya/Mutual-Fund-Analytics-Bluestock.git
+```
+
+### Install Dependencies
+
+```bash
+pip install pandas numpy matplotlib seaborn jupyter
+```
+
+### Launch Notebook
+
+```bash
+jupyter notebook
+```
+
+### Run Recommendation System
+
+```bash
+cd scripts
+python recommender.py
+```
+
+---
+
+# 🎯 Future Improvements
+
+- Machine Learning based Fund Recommendation
 - Portfolio Optimization
-- Risk Forecasting
-- Cloud Deployment
-- Streamlit Web Application
+- Real-Time NAV Integration
+- Streamlit Web Dashboard
+- Predictive Risk Analytics
 
 ---
 
@@ -398,12 +283,11 @@ python scripts/database_loader.py
 
 **Utsav Ratpiya**
 
-B.Tech Computer Science Engineering (AI & ML)
-
+B.Tech CSE (AI & ML)  
 Adani University
 
-Bluestock Fintech Internship
+**Bluestock Fintech Internship – Capstone Project**
 
 ---
 
-## ⭐ If you found this project useful, consider giving it a Star on GitHub!
+## ⭐ If you found this project useful, consider giving it a star!
