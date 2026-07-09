@@ -1,3 +1,7 @@
 __pycache__/
 .ipynb_checkpoints/
 *.pyc
+*.db
+*.sqlite
+*.sqlite3
+logs/
