@@ -272,7 +272,7 @@ Mutual-Fund-Analytics-Bluestock/
 ├── requirements.txt
 ├── README.md
 └── .gitignore
-
+```
 ---
 
 ## ⚙️ Automated ETL Pipeline
