@@ -293,6 +293,7 @@ SQLite Database Creation
 Database Validation
     ↓
 Analytics & Dashboard
+
 ```
 
 ### Features
