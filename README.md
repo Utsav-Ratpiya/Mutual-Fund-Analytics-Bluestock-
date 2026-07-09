@@ -46,7 +46,7 @@ Data Cleaning
 SQLite Database
       │
       ▼
-EDA
+     EDA
       │
       ▼
 Performance Analytics
@@ -281,7 +281,7 @@ The project includes a production-style ETL pipeline that automates the complete
 
 ### Pipeline Stages
 
-```
+```text
 Raw Data
     ↓
 Data Ingestion
@@ -293,7 +293,6 @@ SQLite Database Creation
 Database Validation
     ↓
 Analytics & Dashboard
-
 ```
 
 ### Features
