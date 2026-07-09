@@ -64,50 +64,82 @@ Recommendation System
 
 ## 📌 Project Overview
 
-This project analyzes Indian mutual fund data through an end-to-end analytics pipeline, covering:
+This project presents a complete end-to-end Mutual Fund Analytics Platform developed during the Bluestock Fintech Capstone Internship.
 
-- Data Cleaning & Preprocessing
-- SQL Database Design
+The platform automates the entire analytics lifecycle—from raw data ingestion and preprocessing to database creation, advanced financial analytics, interactive dashboard development, and investment decision support.
+
+### The project includes:
+
+- Automated ETL Pipeline
+- SQLite Data Warehouse
 - Exploratory Data Analysis (EDA)
 - Performance & Risk Analytics
-- Power BI Dashboard
-- Advanced Analytics
-- Mutual Fund Recommendation System
+- Interactive Power BI Dashboard
+- Advanced Financial Analytics
+- Rule-Based Mutual Fund Recommendation System
+- Monte Carlo NAV Simulation
+- Markowitz Portfolio Optimization
 
-The objective is to transform raw mutual fund datasets into meaningful insights for investors and fund managers.
-
+The objective is to transform raw mutual fund datasets into actionable investment insights for investors, analysts, and fund managers through data-driven decision making.
 ---
 
 ## 🚀 Features
 
-### 📈 Data Analytics
-- Cleaned and validated 10 mutual fund datasets
-- Exploratory Data Analysis (EDA)
-- NAV trend analysis
-- AUM growth analysis
-- SIP inflow trends
-- Category inflow analysis
-- Investor demographics
-- Portfolio allocation analysis
+### 📂 Data Engineering
 
-### 📊 Performance Analytics
-- Daily Return Calculation
+- Automated ETL Pipeline
+- Data Validation
+- Missing Value Handling
+- Duplicate Detection
+- SQLite Database Generation
+- Logging & Error Handling
+
+### 📊 Exploratory Data Analysis
+
+- NAV Trend Analysis
+- AUM Growth Analysis
+- SIP Trend Analysis
+- Category Inflow Analysis
+- Investor Demographics
+- Portfolio Allocation
+- Correlation Analysis
+- Geographic Analysis
+
+### 📈 Performance Analytics
+
+- Daily Returns
 - CAGR (1Y / 3Y / 5Y)
-- Alpha & Beta
+- Alpha
+- Beta
 - Sharpe Ratio
 - Sortino Ratio
+- Tracking Error
 - Maximum Drawdown
 - Fund Scorecard
-- Benchmark Comparison
 
-### ⚠️ Advanced Risk Analytics
+### 📉 Dashboard (Power BI)
+- Industry Overview
+- Fund Performance
+- Investor Analytics
+- SIP & Market Trends
+
+### ⚠️ Advanced Analytics
+
 - Historical VaR (95%)
 - Conditional VaR (CVaR)
-- Rolling 90-Day Sharpe Ratio
+- Rolling 90-Day Sharpe
 - Investor Cohort Analysis
 - SIP Continuity Analysis
 - Sector HHI Concentration
-- Rule-Based Fund Recommendation System
+- Rule-Based Fund Recommendation
+
+### 🎯 Bonus Analytics
+
+- Monte Carlo Simulation (5-Year NAV Projection)
+- Markowitz Portfolio Optimization
+- Efficient Frontier
+- Maximum Sharpe Portfolio
+- Minimum Risk Portfolio
 
 ## 📊 Advanced Analytics
 
@@ -115,17 +147,18 @@ The objective is to transform raw mutual fund datasets into meaningful insights 
 
 ![Rolling Sharpe](reports/charts/rolling_sharpe_chart.png)
 
+### Monte Carlo Simulation
+
+![Monte Carlo](reports/charts/monte_carlo_simulation.png)
+
+### Portfolio Optimization
+
+![Efficient Frontier](reports/charts/efficient_frontier.png)
+
 ### Sector HHI Concentration
 
 ![Sector HHI](reports/charts/sector_hhi_concentration.png)
----
 
-
-### 📉 Dashboard (Power BI)
-- Industry Overview
-- Fund Performance
-- Investor Analytics
-- SIP & Market Trends
 ---
 
 
@@ -182,7 +215,10 @@ Mutual-Fund-Analytics-Bluestock/
 │   ├── 02_Data_Cleaning.ipynb
 │   ├── 03_EDA_Analysis.ipynb
 │   ├── 04_Performance_Analytics.ipynb
-│   └── 05_Advanced_Analytics.ipynb
+│   ├── 05_Advanced_Analytics.ipynb
+│   ├── 06_Monte_Carlo_Simulation.ipynb
+│   └── 07_Portfolio_Optimization.ipynb
+│
 │
 ├── logs/
 │   └── etl_pipeline.log
@@ -193,7 +229,13 @@ Mutual-Fund-Analytics-Bluestock/
 │   │   ├── sector_hhi_concentration.png
 │   │   ├── nav_trend.png
 │   │   ├── ...
-│   │   └── sip_trend.png
+│   │   ├── sip_trend.png
+│   │   ├── rolling_sharpe_chart.png
+│   │   ├── monte_carlo_simulation.png
+│   │   ├── monte_carlo_distribution.png
+│   │   ├── efficient_frontier.png
+│   │   ├── risk_return_scatter.png
+│   │   └── sector_hhi_concentration.png
 │   │
 │   ├── alpha_beta.csv
 │   ├── cagr_comparison.csv
@@ -207,7 +249,9 @@ Mutual-Fund-Analytics-Bluestock/
 │   ├── sip_continuity.csv
 │   ├── sortino_ratio.csv
 │   ├── tracking_error.csv
-│   └── var_cvar_report.csv
+│   ├── var_cvar_report.csv
+│   ├── monte_carlo_summary.csv
+│   └── optimal_portfolio.csv
 │
 ├── scripts/
 │   ├── etl_pipeline.py
@@ -281,56 +325,56 @@ The project uses **10 cleaned datasets**:
 
 ---
 
-# 📅 Project Progress
+# 📅 Project Milestones
 
-## ✅ Day 1
-- Project Setup
-- Data Loading
-- Initial Exploration
-
-## ✅ Day 2
+## ✅ Phase 1 — Data Engineering
+- Data Ingestion
 - Data Cleaning
-- Missing Value Handling
-- SQLite Database Creation
+- ETL Pipeline
+- SQLite Database
 
-## ✅ Day 3
+## ✅ Phase 2 — Data Analysis
 - Exploratory Data Analysis
-- Industry Insights
-- Investor Analytics
-
-## ✅ Day 4
 - Performance Analytics
 - Risk Metrics
-- Fund Scorecard
 
-## ✅ Day 5
+## ✅ Phase 3 — Dashboard Development
 - Interactive Power BI Dashboard
 - KPI Cards
-- Investor Dashboard
-- Market Trend Dashboard
+- Drill-through Pages
+- Interactive Filters
 
-## ✅ Day 6
-- Historical VaR & CVaR
-- Rolling Sharpe Ratio
+## ✅ Phase 4 — Advanced Analytics
+- Historical VaR
+- CVaR
+- Rolling Sharpe
 - Investor Cohort Analysis
-- SIP Continuity Analysis
+- SIP Continuity
 - Sector HHI
-- Mutual Fund Recommender
+- Recommendation System
+
+## ✅ Phase 5 — Bonus Analytics
+- Monte Carlo Simulation
+- Markowitz Portfolio Optimization
 
 ---
 
 # 📊 Reports Generated
 
 - Fund Scorecard
-- Alpha & Beta Report
-- Sharpe Ratio Report
-- Sortino Ratio Report
+- Alpha & Beta
+- Sharpe Ratio
+- Sortino Ratio
 - CAGR Comparison
+- Tracking Error
 - Maximum Drawdown
 - Historical VaR & CVaR
-- Sector HHI Analysis
+- Rolling Sharpe Summary
 - Investor Cohort Analysis
-- SIP Continuity Report
+- SIP Continuity Analysis
+- Sector HHI Report
+- Monte Carlo Summary
+- Optimal Portfolio Allocation
 
 ---
 
@@ -365,6 +409,12 @@ cd scripts
 python etl_pipeline.py
 ```
 
+### Run Recommendation System
+
+```bash
+python recommender.py
+```
+
 ### Launch Jupyter Notebook
 
 ```bash
@@ -373,9 +423,7 @@ jupyter notebook
 
 ### Open Power BI Dashboard
 
-Open:
-
-```
+```bash
 dashboard/bluestock_mf_dashboard.pbix
 ```
 
@@ -383,15 +431,24 @@ dashboard/bluestock_mf_dashboard.pbix
 
 # 🎯 Future Improvements
 
-- Monte Carlo Simulation
 
-- Markowitz Efficient Frontier
+- Streamlit Web Dashboard
+- Automated HTML Email Reports
+- Live Portfolio Tracking
+- Scheduled ETL Pipeline
+- Cloud Deployment
 
-- Streamlit Dashboard
+---
 
-- Automated Email Reports
+### Result
 
-- Scheduled Live NAV Updates
+- Real-Time NAV Integration using MFAPI
+- Streamlit Web Dashboard
+- Automated HTML Email Reports
+- Live Portfolio Tracking
+- Machine Learning Based Fund Recommendation
+- Scheduled ETL Pipeline
+- Cloud Deployment
 
 ---
 
