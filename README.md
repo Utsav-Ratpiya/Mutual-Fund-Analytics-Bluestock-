@@ -5,7 +5,7 @@
 
 ---
 
-# 📷 Dashboard Preview
+# 📷 Interactive Power BI Dashboard
 
 ## 🏠 Industry Overview
 
@@ -30,6 +30,36 @@
 ![SIP & Market Trend](dashboard/Dashboard%20images/SIP%20&%20Market%20Trend.png)
 
 ---
+
+## 🔄 Project Workflow
+
+```text
+Raw Datasets
+      │
+      ▼
+Data Ingestion
+      │
+      ▼
+Data Cleaning
+      │
+      ▼
+SQLite Database
+      │
+      ▼
+EDA
+      │
+      ▼
+Performance Analytics
+      │
+      ▼
+Power BI Dashboard
+      │
+      ▼
+Advanced Analytics
+      │
+      ▼
+Recommendation System
+```
 
 
 ## 📌 Project Overview
@@ -105,7 +135,7 @@ The objective is to transform raw mutual fund datasets into meaningful insights 
 | Category | Technologies |
 |----------|--------------|
 | Language | Python |
-| Libraries | Pandas, NumPy, Matplotlib, Seaborn |
+| Libraries | Pandas, NumPy, Matplotlib, Seaborn, Plotly, SQLAlchemy, Requests |
 | Database | SQLite |
 | Dashboard | Power BI |
 | IDE | Jupyter Notebook, VS Code |
@@ -130,22 +160,32 @@ Mutual-Fund-Analytics-Bluestock/
 │   ├── Dashboard_Theme.json
 │   └── bluestock_mf_dashboard.pbix
 │
+│
 ├── data/
+│   │
 │   ├── raw/
 │   │   ├── 01_fund_master.csv
 │   │   ├── ...
 │   │   └── 10_benchmark_indices.csv
 │   │
-│   └── processed/
-│       ├── 01_fund_master_cleaned.csv
-│       ├── ...
-│       └── 10_benchmark_indices_cleaned.csv
+│   ├── processed/
+│   │    ├── 01_fund_master_cleaned.csv
+│   │    ├── ...
+│   │    └── 10_benchmark_indices_cleaned.csv
+│   │    
+│   └── db/
+│        └── bluestock_mf.db
+│
 │
 ├── notebooks/
-│   ├── Day_1_Data_Ingestion.ipynb
-│   ├── EDA_Analysis.ipynb
-│   ├── Performance_Analytics.ipynb
-│   └── Advanced_Analytics.ipynb
+│   ├── 01_Data_Ingestion.ipynb
+│   ├── 02_Data_Cleaning.ipynb
+│   ├── 03_EDA_Analysis.ipynb
+│   ├── 04_Performance_Analytics.ipynb
+│   └── 05_Advanced_Analytics.ipynb
+│
+├── logs/
+│   └── etl_pipeline.log
 │
 ├── reports/
 │   ├── charts/
@@ -170,6 +210,7 @@ Mutual-Fund-Analytics-Bluestock/
 │   └── var_cvar_report.csv
 │
 ├── scripts/
+│   ├── etl_pipeline.py
 │   ├── create_database.py
 │   ├── data_cleaning.py
 │   ├── data_ingestion.py
@@ -178,18 +219,48 @@ Mutual-Fund-Analytics-Bluestock/
 │   ├── recommender.py
 │   ├── run_queries.py
 │   ├── validate_amfi_code.py
-│   ├── verify_database.py
+│   └── verify_database.py
 │
 ├── sql/
 │   ├── schema.sql
 │   └── queries.sql
 │
-├── bluestock_mf.db
 ├── requirements.txt
 ├── README.md
 └── .gitignore
 
 ---
+
+## ⚙️ Automated ETL Pipeline
+
+The project includes a production-style ETL pipeline that automates the complete data workflow.
+
+### Pipeline Stages
+
+```
+Raw Data
+    ↓
+Data Ingestion
+    ↓
+Data Cleaning
+    ↓
+SQLite Database Creation
+    ↓
+Database Validation
+    ↓
+Analytics & Dashboard
+```
+
+### Features
+
+- Automated data ingestion
+- Data quality validation
+- Data cleaning & preprocessing
+- SQLite database generation
+- Row count verification
+- Logging support
+- Error handling
+
 
 # 📚 Datasets
 
@@ -284,31 +355,43 @@ git clone https://github.com/Utsav-Ratpiya/Mutual-Fund-Analytics-Bluestock.git
 ### Install Dependencies
 
 ```bash
-pip install pandas numpy matplotlib seaborn jupyter
+pip install -r requirements.txt
 ```
 
-### Launch Notebook
+### Run ETL Pipeline
+
+```bash
+cd scripts
+python etl_pipeline.py
+```
+
+### Launch Jupyter Notebook
 
 ```bash
 jupyter notebook
 ```
 
-### Run Recommendation System
+### Open Power BI Dashboard
 
-```bash
-cd scripts
-python recommender.py
+Open:
+
+```
+dashboard/bluestock_mf_dashboard.pbix
 ```
 
 ---
 
 # 🎯 Future Improvements
 
-- Machine Learning based Fund Recommendation
-- Portfolio Optimization
-- Real-Time NAV Integration
-- Streamlit Web Dashboard
-- Predictive Risk Analytics
+- Monte Carlo Simulation
+
+- Markowitz Efficient Frontier
+
+- Streamlit Dashboard
+
+- Automated Email Reports
+
+- Scheduled Live NAV Updates
 
 ---
 

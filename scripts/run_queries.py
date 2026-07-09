@@ -1,7 +1,7 @@
 import sqlite3
 import pandas as pd
 
-conn = sqlite3.connect("../bluestock_mf.db")
+conn = sqlite3.connect("../data/db/bluestock_mf.db")
 
 query = """
 SELECT
