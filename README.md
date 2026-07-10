@@ -237,6 +237,11 @@ Mutual-Fund-Analytics-Bluestock/
 │   │   ├── risk_return_scatter.png
 │   │   └── sector_hhi_concentration.png
 │   │
+│   ├── documentation/
+│   │   ├── Final_Report.pdf
+│   │   ├── Bluestock_MF_Capstone_Final_Report.docx
+│   │   └── data_dictionary.md
+│   │
 │   ├── alpha_beta.csv
 │   ├── cagr_comparison.csv
 │   ├── cohort_analysis.csv
