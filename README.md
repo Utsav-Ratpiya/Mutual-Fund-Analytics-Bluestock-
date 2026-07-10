@@ -239,6 +239,7 @@ Mutual-Fund-Analytics-Bluestock/
 │   │
 │   ├── documentation/
 │   │   ├── Final_Report.pdf
+│   │   ├── Presentation.pptx
 │   │   ├── Bluestock_MF_Capstone_Final_Report.docx
 │   │   └── data_dictionary.md
 │   │
